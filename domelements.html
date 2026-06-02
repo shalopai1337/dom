@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table {
+            padding: 8px;
+            border-collapse: collapse;
+            width: 70%;
+            /* margin-left: 0 auto; */
+        }
+
+        label, input {
+            display: block;
+            vertical-align: middle;
+            width: 70%;
+        }
+
+        .my-flex-container {
+            display:flex;
+        }
+    </style>
+</head>
+<body>
+	<table border = '2' id = 'myTable'>
+    <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Отчество</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td> Вася </td>
+            <td> Васин </td>
+            <td> Васильевич </td>
+        </tr>
+
+        <tr>
+            <td> Иван </td>
+            <td> Иванов </td>
+            <td> Иванович </td>    
+        </tr>
+
+        <tr>
+            <td> Антон </td>
+            <td> Антонов </td>
+            <td> Антонович </td>    
+        </tr>
+    </tbody>
+    </table>
+    
+    <div class = 'my-flex-container'>
+        <div class="my-flex-block">item1</div>
+        <div class="my-flex-block">item2</div>
+        <div class="my-flex-block">item3</div>
+        <form name = 'search' id = 'search'>
+            <label for = 'userName'>Ваше имя:</label>
+            <input type = 'text' id = 'userName' placeholder = 'Иван'>
+    
+            <label for = 'userName2'>Ваша фамилия:</label>
+            <input type = 'text' id = 'userName2' placeholder = 'Иванов'>
+    
+            <label for = 'userName3'>Ваше отчество:</label>
+            <input type = 'text' id = 'userName3' placeholder = 'Иванович'>
+        </form>
+    </div>
+
+    
+    <script>
+        "use strict";
+        let tables = document.getElementById('myTable');
+        let lables = document.querySelectorAll('label');
+        let secondName = document.getElementById('userName2');
+        let firstTd = document.querySelector('td');
+        let formSearch = document.getElementById('search');
+        let allInputs = document.querySelectorAll('input');
+        let firstInput = document.querySelector('input');
+        let lastInput = allInputs[allInputs.length - 1];
+    </script>
+</body>
+</html>

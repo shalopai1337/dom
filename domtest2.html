@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<form>
+  <!-- Текстовое поле -->
+  <label for="username">Ваше имя:</label>
+  <input type="text" id="username" name="username">
+  <br><br>
+
+  <!-- Поле для email -->
+  <label for="userEmail">Ваш email:</label>
+  <input type="email" id="userEmail" name="email">
+  <br><br>
+
+  <!-- Радиокнопки (выбор только одного) -->
+  <p>Выберите возрастную категорию:</p>
+  <input type="radio" id="ageYoung" name="ageGroup" value="young" checked>
+  <label for="ageYoung">младше 18</label><br>
+  <input type="radio" id="ageAdult" name="ageGroup" value="adult">
+  <label for="ageAdult">от 18 до 50</label><br>
+  <input type="radio" id="ageOld" name="ageGroup" value="old">
+  <label for="ageOld">старше 60</label>
+  <br><br>
+
+  <!-- Чекбокс -->
+  <input type="checkbox" id="subscribe" name="subscribe" checked>
+  <label for="subscribe">Подписаться на новости</label>
+  <br><br>
+
+  <!-- Кнопка отправки -->
+  <input type="submit" value="Отправить">
+</form>
+
+<script>
+  let inputs = table.getElementsByTagName('input');
+
+  for (let input of inputs) {
+    alert( input.value + ': ' + input.checked );
+  }
+</script>
+</body>
+</html>

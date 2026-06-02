@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+
+        <style>
+            body {
+                background-color: black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div> Таблицы и ячейки </div>
+        <!-- alert( table.rows[0].cells[1].innerHTML ) // "два" -->
+        <table border = '10'>
+            <tr>
+            <td>1:1</td><td>2:1</td><td>3:1</td><td>4:1</td><td>5:1</td>
+        </tr>
+            
+        <tr>
+            <td>1:2</td><td>2:2</td><td>3:2</td><td>4:2</td><td>5:2</td>
+        </tr>
+            
+        <tr>
+            <td>1:3</td><td>2:3</td><td>3:3</td><td>4:3</td><td>5:3</td>
+        </tr>
+            
+        <tr>
+            <td>1:4</td><td>2:4</td><td>3:4</td><td>4:4</td><td>5:4</td>
+        </tr>
+            
+        <tr>
+            <td>1:5</td><td>2:5</td><td>3:5</td><td>4:5</td><td>5:5</td>
+        </tr>
+            
+        </table>
+    
+        <script>
+            let table = document.querySelector('table');
+
+            let chooseOne = function() {
+                for (let i = 0; i < 5; i++) {
+                    table.rows[i].cells[i].style.color = 'yellow';
+                }
+            }
+
+            let chooseTwo = function() {
+                for (let i = 4; i >= 0; i--) {
+                    table.rows[i].cells[4-i].style.color = 'green';
+                }
+            }   
+
+            let b = prompt('1 or 2');
+            if (b == 1) {
+                chooseOne();
+            } else if (b == 2) {
+                chooseTwo();
+            } else {
+                alert('Неверный ввод.');
+            }
+        </script>
+    </body>
+</html>
