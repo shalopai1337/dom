@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        let checkSpam = function(str) {
+            str = str.toLowerCase();
+            if (str.includes('xxx')) return true;
+            if (str.includes('viagra')) return true;
+            return false;
+        }
+
+        let str = prompt('Введите сообщение');
+        alert(checkSpam(str));
+    </script>
+</body>
+</html>

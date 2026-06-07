@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Truncate</title>
+</head>
+<body>
+    <input type='text' id='str' placeholder='Введите свой текст'>
+    <input type='text' id='maxLength' placeholder='Введите максимальную длину'>
+    <button id='truncate'>Нажми</button>
+
+    <p id='output'></p>
+
+    <script>
+        'use strict';
+        let strInput = document.getElementById('str');
+        let maxLengthInput = document.getElementById('maxLength');
+        let button = document.getElementById('truncate');
+        let output = document.getElementById('output');
+
+        button.onclick = function() {
+            let text = strInput.value;
+            let maxLen = Number(maxLengthInput.value);
+            let result;
+
+            if (text.length > maxLen) {
+                result = text.slice(0, maxLen);
+            } else {
+                result = text;
+            }
+
+            output.textContent = result;
+        };
+    </script>
+</body>
+</html>
