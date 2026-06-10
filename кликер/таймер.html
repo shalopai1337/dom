@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang='ru'>
+    <head>
+        <style>
+            body { background-color: black; }
+        </style>
+    </head>
+    <body>
+        <button id='btn'>0</button>
+        <div id='result'></div>
+        <script>
+            let jmyak = document.getElementById('btn');
+            let result = document.getElementById('result');
+            jmyak.onclick = function() {
+                this.textContent = Number(this.textContent) + 1;
+            }
+        </script>
+    </body>
+</html>
